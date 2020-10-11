@@ -1,0 +1,26 @@
+
+{
+  "name": "employeetracker",
+  "version": "1.0.0",
+  "description": "Tracks all employees. Allows you to view specifiec details for employees and departments.",
+  "main": "employees.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "James Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "express": "^4.17.1",
+    "inquirer": "^7.3.3",
+    "mysql": "^2.18.1"
+  },
+  
