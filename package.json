@@ -1,4 +1,3 @@
-
 {
   "name": "employeetracker",
   "version": "1.0.0",
@@ -6,15 +5,15 @@
   "main": "employees.js",
   "scripts": {
     "start": "node employees.js"
-},
+  },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/jameslee70/Homework-Assignment-12"
   },
   "author": "James Lee",
   "license": "MIT",
   "bugs": {
-    "url": "git+https://github.com/jameslee70/Homework-Assignment-12"
+    "url": "https://github.com/jameslee70/Homework-Assignment-12/issues"
   },
   "homepage": "",
   "dependencies": {
@@ -24,5 +23,3 @@
     "mysql": "^2.18.1"
   }
 }
-  
-  

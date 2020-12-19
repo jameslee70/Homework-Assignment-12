@@ -2,22 +2,18 @@ const express = require("express");
 const mysql = require("mysql");
 const inquirer = require('inquirer');
 
-// Create express app instance.
 var app = express();
 
-// Set the port for the application
 var PORT = process.env.PORT || 7070;
 
-// MySQL DB Connection Information
 var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "Sqlpack0!",
+  password: "baconlover200!",
   database: "employee_trackerDB"
 });
 
-// Initiate MySQL Connection.
 connection.connect(err => {
     if (err) throw err;
 
@@ -61,7 +57,6 @@ const promptUser = () => {
 
 const viewEmployees = () => {
   const query = "SELECT employee.id, employee.first_name, employee.last_name, role.title, employee.manager_id FROM employee LEFT JOIN role ON employee.role_id = role.id;";
-  // add another join to match the manager ID
   const queryTwo = " SELECT CONCAT(E.first_name,' ', E.last_name) AS Employee, CONCAT(M.first_name, ' ', M.last_name) AS Manager FROM employee E LEFT JOIN employee M ON E.manager_id = M.id;";
   connection.query(query, (err, res) => {
     if (err) throw err;
@@ -109,7 +104,6 @@ const addDepartment = () => {
         .then(answer => {
         console.log(answer.department);
 
-        //go to dept table and search for where it matches answer
 
         connection.query('INSERT INTO department (name) VALUES (?)', [answer.department], (err, res) => {
           if (err) throw err;
@@ -149,7 +143,6 @@ const addRole = () => {
           }
       ]) 
       .then(function({ title, salary, department_id }) {
-        // let index = departments.indexOf(department_id);
 
         connection.query('INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?)', [title, salary, department_id], (err, res) => {
           if (err) throw err;
