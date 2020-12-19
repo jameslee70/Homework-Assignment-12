@@ -14,7 +14,7 @@
   "author": "James Lee",
   "license": "MIT",
   "bugs": {
-    "url": ""
+    "url": "git+https://github.com/jameslee70/Homework-Assignment-12"
   },
   "homepage": "",
   "dependencies": {
@@ -22,5 +22,7 @@
     "express": "^4.17.1",
     "inquirer": "^7.3.3",
     "mysql": "^2.18.1"
-  },
+  }
+}
+  
   
