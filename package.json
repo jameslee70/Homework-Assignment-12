@@ -5,8 +5,8 @@
   "description": "Tracks all employees. Allows you to view specifiec details for employees and departments.",
   "main": "employees.js",
   "scripts": {
-    "test": "npm test"
-  },
+    "start": "node employees.js"
+},
   "repository": {
     "type": "git",
     "url": ""
